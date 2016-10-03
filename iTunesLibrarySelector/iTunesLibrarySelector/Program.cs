@@ -23,7 +23,8 @@ namespace iTunesLibrarySelector
                 encodedString = encodedString.Insert(i, "\n\t\t");
                 i += 60 + 3;
             }
-
+            // NEW INFO!: https://en.discussions.tomtom.com/spark-and-spark-3-runner-2-and-runner-3-tomtom-adventurer-473/runner-2-does-not-find-any-itunes-playlists-1011853
+            // need to use "c:\Program Files (x86)\Common Files\Apple\Apple Application Support\plutil.exe" to convert plist to xml then edit xml then back to plist...
             string prefPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Apple Computer\iTunes\iTunesPrefs.xml";
             //string prefPath =@"c:\temp\iTunesPrefs.xml";
             string prefFile = File.ReadAllText(prefPath);
